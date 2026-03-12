@@ -89,6 +89,27 @@ G --> H[Hub de Trocas Comunitário]
 
 ```
 
+Token Flow
+
+O ecossistema Bonus-Hora funciona como um ciclo contínuo de troca de serviços e circulação de tokens:`
+
+graph LR
+
+A[Usuário presta serviço] --> B[Registro no app]
+B --> C[Validação do serviço]
+C --> D[Emissão de tokens Bonus-Hora]
+
+D --> E[Carteira digital do prestador]
+
+E --> F[Tokens utilizados para outro serviço]
+F --> G[Pagamento a outro participante]
+
+G --> H[Novo serviço prestado]
+
+H --> I[Transação registrada]
+
+I --> D
+
 # Roadmap do Projeto
 
 ### Fase 1 — Concepção
