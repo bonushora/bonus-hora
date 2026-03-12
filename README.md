@@ -92,6 +92,22 @@ G --> H[Hub de Trocas Comunitário]
 
 ```
 
+## Roadmap do MVP (sem blockchain)
+
+### Fase 1 — Concepção
+- Definição do modelo econômico básico
+- Estruturação do MVP (planilha ou app simples)
+
+### Fase 2 — Teste Piloto
+- Registro manual de serviços
+- Testes com usuários reais
+
+### Fase 3 — Validação
+- Ajustes de regras de troca
+- Registro de feedback e melhorias
+
+```
+
 # Token Flow
 
 O ecossistema Bonus-Hora funciona como um ciclo contínuo de troca de serviços e circulação de tokens:
