@@ -113,7 +113,7 @@ I --> D
 
 ```
 
-Economic Model
+# Economic Model
 
 The mathematical model that defines the Bonus-Hora system can be found here:
 
@@ -133,27 +133,27 @@ governance mediation mechanisms
 
 # Roadmap do Projeto
 
-### Fase 1 — Concepção
-- definição do modelo econômico  
-- documentação do projeto  
-- criação do repositório GitHub  
+## Fase 1 — Concepção
+- Definição do modelo econômico  
+- Documentação do projeto  
+- Criação do repositório GitHub  
 
-### Fase 2 — Protótipo
-- design do aplicativo  
-- sistema de registro de serviços  
-- carteira digital básica  
+## Fase 2 — Protótipo
+- Design do aplicativo  
+- Sistema de registro de serviços  
+- Carteira digital básica  
 
-### Fase 3 — Infraestrutura Blockchain
-- desenvolvimento do token Bonus-Hora  
-- registro das transações  
+## Fase 3 — Infraestrutura Blockchain
+- Desenvolvimento do token Bonus-Hora  
+- Registro das transações  
 
-### Fase 4 — Hub Comunitário Piloto
-- implantação de um hub de trocas  
-- testes com usuários reais  
+## Fase 4 — Hub Comunitário Piloto
+- Implantação de um hub de trocas  
+- Testes com usuários reais  
 
-### Fase 5 — Expansão
-- integração com novas comunidades  
-- governança descentralizada  
+## Fase 5 — Expansão
+- Integração com novas comunidades  
+- Governança descentralizada  
 
 ---
 
@@ -161,40 +161,39 @@ governance mediation mechanisms
 
 O Bonus-Hora pode evoluir para um ecossistema descentralizado composto por:
 
-- hubs de troca comunitários  
-- rede de prestadores de serviços  
-- sistema de reputação baseado em blockchain  
-- governança descentralizada (DAO)  
+- Hubs de troca comunitários  
+- Rede de prestadores de serviços  
+- Sistema de reputação baseado em blockchain  
+- Governança descentralizada (DAO)  
 
 ---
 
 # Como Contribuir
 
-O projeto Bonus-Hora é aberto à colaboração.
+O projeto Bonus-Hora é aberto à colaboração.  
 
 Desenvolvedores, pesquisadores e membros da comunidade podem contribuir com:
 
-- desenvolvimento de software  
-- design de experiência do usuário  
-- estudos econômicos e sociais  
-- implantação de hubs comunitários  
+- Desenvolvimento de software  
+- Design de experiência do usuário  
+- Estudos econômicos e sociais  
+- Implantação de hubs comunitários  
 
 ---
 
 # Objetivo
 
-Criar hubs de trocas comunitários capazes de fortalecer economias locais, estimular cooperação social e permitir que pessoas troquem valor diretamente através do tempo e do trabalho.
+Criar hubs de trocas comunitários capazes de fortalecer economias locais, estimular cooperação social e permitir que pessoas troquem valor diretamente através do tempo e do trabalho.  
 
 ---
 
 # Visão de Longo Prazo
 
-O Bonus-Hora pretende evoluir para uma infraestrutura social descentralizada onde comunidades possam criar suas próprias economias baseadas em colaboração, confiança e troca direta de serviços.
+O Bonus-Hora pretende evoluir para uma infraestrutura social descentralizada onde comunidades possam criar suas próprias economias baseadas em colaboração, confiança e troca direta de serviços.  
 
 ---
 
 # Autor
 
-**Thales Rangel**
-
+**Thales Rangel**  
 Criador do projeto Bonus-Hora.
