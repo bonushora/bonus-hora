@@ -92,7 +92,7 @@ G --> H[Hub de Trocas Comunitário]
 
 ```
 
-## Roadmap do MVP (sem blockchain)
+# Roadmap do MVP (sem blockchain)
 
 ### Fase 1 — Concepção
 - Definição do modelo econômico básico
