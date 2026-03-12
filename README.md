@@ -91,8 +91,9 @@ G --> H[Hub de Trocas Comunitário]
 
 # Token Flow
 
-O ecossistema Bonus-Hora funciona como um ciclo contínuo de troca de serviços e circulação de tokens:`
+O ecossistema Bonus-Hora funciona como um ciclo contínuo de troca de serviços e circulação de tokens:
 
+```mermaid
 graph LR
 
 A[Usuário presta serviço] --> B[Registro no app]
