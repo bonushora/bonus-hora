@@ -89,7 +89,7 @@ G --> H[Hub de Trocas Comunitário]
 
 ```
 
-Token Flow
+# Token Flow
 
 O ecossistema Bonus-Hora funciona como um ciclo contínuo de troca de serviços e circulação de tokens:`
 
@@ -109,6 +109,8 @@ G --> H[Novo serviço prestado]
 H --> I[Transação registrada]
 
 I --> D
+
+```
 
 # Roadmap do Projeto
 
