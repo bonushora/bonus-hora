@@ -86,7 +86,7 @@ F --> G[Histórico Imutável de Transações]
 
 G --> H[Hub de Trocas Comunitário]
 
----
+```
 
 # Roadmap do Projeto
 
