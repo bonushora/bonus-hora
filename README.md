@@ -91,6 +91,20 @@ F --> G[Histórico Imutável de Transações]
 G --> H[Hub de Trocas Comunitário]
 
 ```
+# Repositório do Projeto
+
+O desenvolvimento do Bonus-Hora está em andamento. O repositório do GitHub contém:
+
+- Documentação do projeto  
+- Modelos econômicos e diagramas de arquitetura  
+- Roadmap do MVP (sem blockchain)  
+
+> ⚠️ Observação: O protótipo ainda está em construção e funcionalidades como blockchain e carteira digital não estão implementadas nesta fase.  
+
+Você pode acompanhar a evolução do projeto, sugerir melhorias ou colaborar diretamente através do repositório oficial:  
+[Bonus-Hora no GitHub](https://github.com/seu-usuario/bonus-hora)
+
+---
 
 # Roadmap do MVP (sem blockchain)
 
