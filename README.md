@@ -115,21 +115,18 @@ I --> D
 
 # Economic Model
 
-The mathematical model that defines the Bonus-Hora system can be found here:
+O modelo matemático que define o sistema Bonus-Hora pode ser encontrado aqui:
 
-Bonus-Hora Economic Model
+[Bonus-Hora Economic Model](ECONOMIC_MODEL.md)
 
-This model defines:
+Este modelo define:
 
-token generation rules
+- Token generation rules  
+- Reputation adjustments  
+- Circulation balance  
+- Governance mediation mechanisms  
 
-reputation adjustments
-
-circulation balance
-
-governance mediation mechanisms
-
-```
+---
 
 # Roadmap do Projeto
 
