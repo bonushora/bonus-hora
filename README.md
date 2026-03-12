@@ -5,6 +5,9 @@
 [![Type](https://img.shields.io/badge/project-Web3-orange)](TYPE.md) 
 [![Whitepaper](https://img.shields.io/badge/whitepaper-economic_model-black)](ECONOMIC_MODEL.md)
 
+O whitepaper completo está em inglês, mas você pode consultar um **resumo executivo em português** nesta versão: [Resumo Executivo](RESUMO_EXECUTIVO_PT.md)
+
+Bonus-Hora é uma moeda social baseada em tempo criada para facilitar trocas de serviços dentro de comunidades.
 Bonus-Hora é uma moeda social baseada em tempo criada para facilitar trocas de serviços dentro de comunidades.
 
 A proposta é permitir que pessoas utilizem suas habilidades para gerar valor coletivo, mesmo quando não possuem acesso a dinheiro.
