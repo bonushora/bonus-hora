@@ -4,6 +4,7 @@
 [![Status](https://img.shields.io/badge/status-early--stage-blue)](STATUS.md) 
 [![Type](https://img.shields.io/badge/project-Web3-orange)](TYPE.md) 
 [![Whitepaper](https://img.shields.io/badge/whitepaper-economic_model-black)](ECONOMIC_MODEL.md)
+[![Resumo Econômico](https://img.shields.io/badge/resumo_econômico-pt-blue)](RESUMO_ECONOMICO_PT.md)
 
 O whitepaper completo está em inglês, mas você pode consultar um **resumo executivo em português** nesta versão: [Resumo Executivo](RESUMO_EXECUTIVO_PT.md)
 
