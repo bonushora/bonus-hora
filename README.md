@@ -1,8 +1,8 @@
 # Bonus-Hora
 
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-early--stage-blue)
-![Type](https://img.shields.io/badge/project-Web3-orange)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Status](https://img.shields.io/badge/status-early--stage-blue)](README.md)
+[![Type](https://img.shields.io/badge/project-Web3-orange)](README.md)
 
 Bonus-Hora é uma moeda social baseada em tempo criada para facilitar trocas de serviços dentro de comunidades.
 
