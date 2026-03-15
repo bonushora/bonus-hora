@@ -8,16 +8,35 @@
 
 O whitepaper completo está em inglês, mas você pode consultar um **resumo executivo em português** nesta versão: [Resumo Executivo](RESUMO_EXECUTIVO_PT.md)
 
-Bonus-Hora é uma moeda social baseada em tempo criada para facilitar trocas de serviços dentro de comunidades.
+# Sobre o Projeto
+
 Bonus-Hora é uma moeda social baseada em tempo criada para facilitar trocas de serviços dentro de comunidades.
 
 A proposta é permitir que pessoas utilizem suas habilidades para gerar valor coletivo, mesmo quando não possuem acesso a dinheiro.
 
 No sistema Bonus-Hora:
 
-**1 hora de serviço prestado = 1 token Bonus-Hora**
+1 hora de serviço prestado = 1 token Bonus-Hora
 
 Essa abordagem fortalece economias locais e incentiva colaboração comunitária.
+
+---
+
+# Natureza do Projeto
+
+Este projeto é um experimento de inovação social e tecnológica em fase inicial.
+
+O objetivo deste repositório é:
+
+documentar o desenvolvimento do modelo econômico
+
+estruturar o protótipo do sistema
+
+permitir colaboração aberta da comunidade
+
+registrar a evolução do projeto ao longo do tempo
+
+O Bonus-Hora busca explorar como tecnologia digital e moedas sociais podem fortalecer economias locais e redes de cooperação comunitária.
 
 ---
 
@@ -104,6 +123,26 @@ O desenvolvimento do Bonus-Hora está em andamento. O repositório do GitHub con
 
 Você pode acompanhar a evolução do projeto, sugerir melhorias ou colaborar diretamente através do repositório oficial:  
 [Bonus-Hora no GitHub](https://github.com/seu-usuario/bonus-hora)
+
+---
+
+# MVP Tecnológico (Fase Inicial)
+
+O primeiro protótipo será desenvolvido sem blockchain, para permitir validação rápida do modelo de troca de serviços.
+
+Tecnologias previstas para o MVP
+
+aplicativo simples
+
+banco de dados tradicional
+
+registro de serviços
+
+carteira simulada de tokens
+
+sistema básico de reputação
+
+Essa abordagem permite testar o modelo econômico e social antes da implementação de tecnologias mais complexas.
 
 ---
 
