@@ -1,4 +1,3 @@
-
 # Mapa do Sistema BonusHora
 
 O sistema BonusHora é uma plataforma digital para trocas comunitárias baseadas em tempo de trabalho.
