@@ -259,7 +259,13 @@ Criar hubs de trocas comunitários capazes de fortalecer economias locais, estim
 
 # Visão de Longo Prazo
 
-O Bonus-Hora pretende evoluir para uma infraestrutura social descentralizada onde comunidades possam criar suas próprias economias baseadas em colaboração, confiança e troca direta de serviços.  
+O Bonus-Hora pretende evoluir para uma infraestrutura social descentralizada onde comunidades possam criar suas próprias economias baseadas em:
+
+- colaboração
+
+- confiança
+
+- troca direta de serviços
 
 ---
 
