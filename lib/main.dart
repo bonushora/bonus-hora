@@ -23,11 +23,10 @@ class TelaPrincipal extends StatefulWidget {
 
 class _TelaPrincipalState extends State<TelaPrincipal> {
   int _indiceAtual = 0;
-
   final List<Widget> _telas = [
-    const TelaInicio(), // Tela 1
-    const Center(child: Text("Mural de Oportunidades")), // Tela 2
-    const Center(child: Text("Loja de Créditos")), // Tela 3
+    const TelaInicio(),
+    const Center(child: Text("Mural de Oportunidades")),
+    const Center(child: Text("Loja de Créditos")),
   ];
 
   @override
@@ -49,36 +48,49 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
   }
 }
 
-// --- TELA 1: CARTEIRA DE TEMPO ---
 class TelaInicio extends StatelessWidget {
   const TelaInicio({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Olá, Maria!"), backgroundColor: Colors.white, foregroundColor: Colors.black, elevation: 0),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: Row(
           children: [
-            // O CARD DE SALDO
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(24),
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(colors: [Color(0xFF2E7D32), Color(0xFF1565C0)]),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: const Column(
-                children: [
-                  Text("SEU SALDO DE IMPACTO", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 10),
-                  Text("12h 45m", style: TextStyle(fontSize: 42, color: Colors.white, fontWeight: FontWeight.bold)),
-                  Text("Equivalente a 12 créditos sociais", style: TextStyle(color: Colors.white70)),
-                ],
-              ),
-            ),
+            const CircleAvatar(backgroundColor: Colors.grey, child: Icon(Icons.person, color: Colors.white)),
+            const SizedBox(width: 10),
+            const Text("Olá, Maria!", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+            const Spacer(),
+            const Icon(Icons.notifications_none, color: Colors.black),
           ],
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(24),
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(colors: [Color(0xFF2E7D32), Color(0xFF1565C0)]),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Column(
+                  children: [
+                    Text("SEU SALDO DE IMPACTO", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                    SizedBox(height: 10),
+                    Text("12h 45m", style: TextStyle(fontSize: 42, color: Colors.white, fontWeight: FontWeight.bold)),
+                    Text("Equivalente a 12 créditos sociais", style: TextStyle(color: Colors.white70)),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
