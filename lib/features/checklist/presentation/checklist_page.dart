@@ -5,6 +5,7 @@ import '../../../core/theme/app_radius.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/theme/app_text.dart';
 
+import '../../service_completion/data/mock_service_completion.dart';
 import '../../service_completion/presentation/service_completion_page.dart';
 
 class ChecklistPage extends StatelessWidget {
@@ -20,13 +21,16 @@ class ChecklistPage extends StatelessWidget {
           'Protocolo de Qualidade',
         ),
       ),
+
       body: Padding(
         padding: const EdgeInsets.all(
           AppSpacing.lg,
         ),
+
         child: Column(
           crossAxisAlignment:
               CrossAxisAlignment.start,
+
           children: [
             Text(
               'Prestação #000124',
@@ -72,16 +76,21 @@ class ChecklistPage extends StatelessWidget {
 
             SizedBox(
               width: double.infinity,
+
               child: FilledButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (_) =>
-                          const ServiceCompletionPage(),
+                          ServiceCompletionPage(
+                            completion:
+                                MockServiceCompletion.completed,
+                          ),
                     ),
                   );
                 },
+
                 child: const Text(
                   'Finalizar etapa',
                 ),
@@ -93,6 +102,7 @@ class ChecklistPage extends StatelessWidget {
     );
   }
 }
+
 
 class _ChecklistItem extends StatelessWidget {
   final IconData icon;
@@ -111,18 +121,24 @@ class _ChecklistItem extends StatelessWidget {
       margin: const EdgeInsets.only(
         bottom: AppSpacing.md,
       ),
+
       padding: const EdgeInsets.all(
         AppSpacing.md,
       ),
+
       decoration: BoxDecoration(
         color: AppColors.card,
-        borderRadius: BorderRadius.circular(
+
+        borderRadius:
+            BorderRadius.circular(
           AppRadius.lg,
         ),
+
         border: Border.all(
           color: AppColors.border,
         ),
       ),
+
       child: Row(
         children: [
           Icon(

@@ -5,11 +5,15 @@ import '../../../core/theme/app_radius.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/theme/app_text.dart';
 
+import '../domain/entities/service_completion.dart';
 import '../../service_evaluation/presentation/service_evaluation_page.dart';
 
 class ServiceCompletionPage extends StatelessWidget {
+  final ServiceCompletion completion;
+
   const ServiceCompletionPage({
     super.key,
+    required this.completion,
   });
 
   @override
@@ -99,7 +103,7 @@ class ServiceCompletionPage extends StatelessWidget {
 
                 children: [
                   Text(
-                    'Prestação #000124',
+                    'Prestação #${completion.id}',
                     style:
                         AppText.textTheme.titleLarge,
                   ),
@@ -108,8 +112,8 @@ class ServiceCompletionPage extends StatelessWidget {
                     height: AppSpacing.md,
                   ),
 
-                  const Text(
-                    'Qualidade: 95%',
+                  Text(
+                    'Qualidade: ${(completion.qualityScore * 100).toInt()}%',
                   ),
 
                   const SizedBox(
@@ -117,7 +121,7 @@ class ServiceCompletionPage extends StatelessWidget {
                   ),
 
                   Text(
-                    '💎 +5 BH gerados',
+                    '💎 +${completion.bonusHourGenerated} BH gerados',
                     style:
                         AppText.textTheme.titleMedium,
                   ),
