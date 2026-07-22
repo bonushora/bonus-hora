@@ -5,11 +5,16 @@ import '../../../core/theme/app_radius.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/theme/app_text.dart';
 
-import '../../home/presentation/home_page.dart';
+import '../../service_progress/presentation/service_in_progress_page.dart';
 
-class ServiceEvaluationPage extends StatelessWidget {
-  const ServiceEvaluationPage({
+class ServiceAcceptedPage extends StatelessWidget {
+  final String provider;
+  final int reward;
+
+  const ServiceAcceptedPage({
     super.key,
+    required this.provider,
+    required this.reward,
   });
 
   @override
@@ -17,29 +22,25 @@ class ServiceEvaluationPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Central da Verdade',
+          'Serviço aceito',
         ),
       ),
-
       body: Padding(
         padding: const EdgeInsets.all(
           AppSpacing.lg,
         ),
-
         child: Column(
           crossAxisAlignment:
               CrossAxisAlignment.start,
-
           children: [
             Center(
               child: CircleAvatar(
-                radius: 38,
-                backgroundColor:
-                    AppColors.success,
+                radius: 40,
+                backgroundColor: AppColors.success,
                 child: const Icon(
-                  Icons.verified,
+                  Icons.handshake,
                   color: Colors.white,
-                  size: 42,
+                  size: 44,
                 ),
               ),
             ),
@@ -49,7 +50,7 @@ class ServiceEvaluationPage extends StatelessWidget {
             ),
 
             Text(
-              'Prestação validada',
+              'O prestador aceitou sua solicitação',
               style:
                   AppText.textTheme.headlineMedium,
             ),
@@ -59,7 +60,7 @@ class ServiceEvaluationPage extends StatelessWidget {
             ),
 
             Text(
-              'O Protocolo de Qualidade confirmou a conclusão do serviço.',
+              '$provider confirmou o atendimento.',
               style:
                   AppText.textTheme.bodyLarge,
             ),
@@ -70,34 +71,24 @@ class ServiceEvaluationPage extends StatelessWidget {
 
             Container(
               width: double.infinity,
-
-              padding:
-                  const EdgeInsets.all(
+              padding: const EdgeInsets.all(
                 AppSpacing.lg,
               ),
-
               decoration: BoxDecoration(
-                color:
-                    AppColors.card,
-
-                borderRadius:
-                    BorderRadius.circular(
+                color: AppColors.card,
+                borderRadius: BorderRadius.circular(
                   AppRadius.xl,
                 ),
-
                 border: Border.all(
-                  color:
-                      AppColors.border,
+                  color: AppColors.border,
                 ),
               ),
-
               child: Column(
                 crossAxisAlignment:
                     CrossAxisAlignment.start,
-
                 children: [
                   Text(
-                    'Resultado da avaliação',
+                    provider,
                     style:
                         AppText.textTheme.titleLarge,
                   ),
@@ -107,31 +98,25 @@ class ServiceEvaluationPage extends StatelessWidget {
                   ),
 
                   const Text(
-                    '⭐ Qualidade: 95%',
-                  ),
-
-                  const SizedBox(
-                    height: AppSpacing.sm,
+                    '⭐ 4,9',
                   ),
 
                   const Text(
-                    '✅ Serviço aprovado',
-                  ),
-
-                  const SizedBox(
-                    height: AppSpacing.sm,
+                    '📍 Salvador - BA',
                   ),
 
                   const Text(
-                    '💎 +5 BH gerados',
+                    '🕒 Hoje às 14:30',
                   ),
 
                   const SizedBox(
-                    height: AppSpacing.sm,
+                    height: AppSpacing.lg,
                   ),
 
-                  const Text(
-                    '📈 Reputação +2%',
+                  Text(
+                    '💎 $reward BH',
+                    style:
+                        AppText.textTheme.titleLarge,
                   ),
                 ],
               ),
@@ -141,21 +126,21 @@ class ServiceEvaluationPage extends StatelessWidget {
 
             SizedBox(
               width: double.infinity,
-
-              child: FilledButton(
+              child: FilledButton.icon(
                 onPressed: () {
-                  Navigator.pushAndRemoveUntil(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (_) =>
-                          const HomePage(),
+                          const ServiceInProgressPage(),
                     ),
-                    (route) => false,
                   );
                 },
-
-                child: const Text(
-                  'Voltar para início',
+                icon: const Icon(
+                  Icons.play_arrow,
+                ),
+                label: const Text(
+                  'Iniciar acompanhamento',
                 ),
               ),
             ),

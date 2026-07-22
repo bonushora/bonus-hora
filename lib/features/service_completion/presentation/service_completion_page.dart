@@ -5,10 +5,10 @@ import '../../../core/theme/app_radius.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/theme/app_text.dart';
 
-import '../../home/presentation/home_page.dart';
+import '../../service_evaluation/presentation/service_evaluation_page.dart';
 
-class ServiceEvaluationPage extends StatelessWidget {
-  const ServiceEvaluationPage({
+class ServiceCompletionPage extends StatelessWidget {
+  const ServiceCompletionPage({
     super.key,
   });
 
@@ -17,7 +17,7 @@ class ServiceEvaluationPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Central da Verdade',
+          'Protocolo concluído',
         ),
       ),
 
@@ -33,13 +33,15 @@ class ServiceEvaluationPage extends StatelessWidget {
           children: [
             Center(
               child: CircleAvatar(
-                radius: 38,
+                radius: 36,
+
                 backgroundColor:
                     AppColors.success,
+
                 child: const Icon(
                   Icons.verified,
                   color: Colors.white,
-                  size: 42,
+                  size: 40,
                 ),
               ),
             ),
@@ -49,7 +51,7 @@ class ServiceEvaluationPage extends StatelessWidget {
             ),
 
             Text(
-              'Prestação validada',
+              'Serviço concluído com sucesso!',
               style:
                   AppText.textTheme.headlineMedium,
             ),
@@ -59,7 +61,7 @@ class ServiceEvaluationPage extends StatelessWidget {
             ),
 
             Text(
-              'O Protocolo de Qualidade confirmou a conclusão do serviço.',
+              'A execução foi validada pelo Protocolo de Qualidade BônusHora.',
               style:
                   AppText.textTheme.bodyLarge,
             ),
@@ -97,7 +99,7 @@ class ServiceEvaluationPage extends StatelessWidget {
 
                 children: [
                   Text(
-                    'Resultado da avaliação',
+                    'Prestação #000124',
                     style:
                         AppText.textTheme.titleLarge,
                   ),
@@ -107,31 +109,17 @@ class ServiceEvaluationPage extends StatelessWidget {
                   ),
 
                   const Text(
-                    '⭐ Qualidade: 95%',
+                    'Qualidade: 95%',
                   ),
 
                   const SizedBox(
                     height: AppSpacing.sm,
                   ),
 
-                  const Text(
-                    '✅ Serviço aprovado',
-                  ),
-
-                  const SizedBox(
-                    height: AppSpacing.sm,
-                  ),
-
-                  const Text(
+                  Text(
                     '💎 +5 BH gerados',
-                  ),
-
-                  const SizedBox(
-                    height: AppSpacing.sm,
-                  ),
-
-                  const Text(
-                    '📈 Reputação +2%',
+                    style:
+                        AppText.textTheme.titleMedium,
                   ),
                 ],
               ),
@@ -144,18 +132,17 @@ class ServiceEvaluationPage extends StatelessWidget {
 
               child: FilledButton(
                 onPressed: () {
-                  Navigator.pushAndRemoveUntil(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (_) =>
-                          const HomePage(),
+                          const ServiceEvaluationPage(),
                     ),
-                    (route) => false,
                   );
                 },
 
                 child: const Text(
-                  'Voltar para início',
+                  'Ir para Central da Verdade',
                 ),
               ),
             ),
