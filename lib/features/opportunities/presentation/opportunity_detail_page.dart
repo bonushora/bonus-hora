@@ -5,6 +5,9 @@ import '../../../core/theme/app_radius.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/theme/app_text.dart';
 
+import '../../auth/domain/enums/capability.dart';
+import '../../auth/presentation/session/user_session.dart';
+
 import '../domain/entities/opportunity.dart';
 import '../../service_request/presentation/create_service_request_page.dart';
 
@@ -34,6 +37,11 @@ class OpportunityDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final canRequestService =
+        UserSession.currentUser.capabilities.contains(
+      Capability.requestService,
+    );
+
     return Scaffold(
 
       appBar: AppBar(
@@ -96,11 +104,9 @@ class OpportunityDetailPage extends StatelessWidget {
                     ),
                   ),
 
-
                   const SizedBox(
                     height: AppSpacing.md,
                   ),
-
 
                   Text(
                     opportunity.title,
@@ -108,11 +114,9 @@ class OpportunityDetailPage extends StatelessWidget {
                         AppText.textTheme.headlineMedium,
                   ),
 
-
                   const SizedBox(
                     height: AppSpacing.sm,
                   ),
-
 
                   Text(
                     opportunity.provider,
@@ -120,11 +124,9 @@ class OpportunityDetailPage extends StatelessWidget {
                         AppText.textTheme.bodyLarge,
                   ),
 
-
                   const SizedBox(
                     height: AppSpacing.md,
                   ),
-
 
                   Row(
                     children: [
@@ -161,11 +163,9 @@ class OpportunityDetailPage extends StatelessWidget {
                     ],
                   ),
 
-
                   const SizedBox(
                     height: AppSpacing.lg,
                   ),
-
 
                   Text(
                     opportunity.description,
@@ -173,11 +173,9 @@ class OpportunityDetailPage extends StatelessWidget {
                         AppText.textTheme.bodyLarge,
                   ),
 
-
                   const SizedBox(
                     height: AppSpacing.lg,
                   ),
-
 
                   Row(
                     mainAxisAlignment:
@@ -202,33 +200,35 @@ class OpportunityDetailPage extends StatelessWidget {
               ),
             ),
 
+            if (canRequestService) ...[
 
-            const SizedBox(
-              height: AppSpacing.xl,
-            ),
+              const SizedBox(
+                height: AppSpacing.xl,
+              ),
 
+              SizedBox(
+                width: double.infinity,
 
-            SizedBox(
-              width: double.infinity,
-
-              child: FilledButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) =>
-                          CreateServiceRequestPage(
-                        opportunity: opportunity,
+                child: FilledButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) =>
+                            CreateServiceRequestPage(
+                          opportunity: opportunity,
+                        ),
                       ),
-                    ),
-                  );
-                },
+                    );
+                  },
 
-                child: const Text(
-                  'Solicitar serviço',
+                  child: const Text(
+                    'Solicitar serviço',
+                  ),
                 ),
               ),
-            ),
+
+            ],
 
           ],
         ),

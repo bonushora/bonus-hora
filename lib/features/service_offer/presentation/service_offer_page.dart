@@ -5,6 +5,9 @@ import '../../../core/theme/app_radius.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/theme/app_text.dart';
 
+import '../../auth/domain/enums/capability.dart';
+import '../../auth/presentation/session/user_session.dart';
+
 import 'create_service_offer_page.dart';
 
 class ServiceOfferPage extends StatelessWidget {
@@ -12,6 +15,11 @@ class ServiceOfferPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final canOfferService =
+        UserSession.currentUser.capabilities.contains(
+      Capability.offerService,
+    );
+
     return Scaffold(
 
       appBar: AppBar(
@@ -39,11 +47,9 @@ class ServiceOfferPage extends StatelessWidget {
                   AppText.textTheme.headlineMedium,
             ),
 
-
             const SizedBox(
               height: AppSpacing.lg,
             ),
-
 
             Text(
               'Serviços publicados',
@@ -51,11 +57,9 @@ class ServiceOfferPage extends StatelessWidget {
                   AppText.textTheme.titleLarge,
             ),
 
-
             const SizedBox(
               height: AppSpacing.md,
             ),
-
 
             Container(
 
@@ -65,9 +69,7 @@ class ServiceOfferPage extends StatelessWidget {
               ),
 
               decoration: BoxDecoration(
-
-                color:
-                    AppColors.card,
+                color: AppColors.card,
 
                 borderRadius:
                     BorderRadius.circular(
@@ -75,11 +77,9 @@ class ServiceOfferPage extends StatelessWidget {
                 ),
 
                 border: Border.all(
-                  color:
-                      AppColors.border,
+                  color: AppColors.border,
                 ),
               ),
-
 
               child: Column(
 
@@ -94,12 +94,9 @@ class ServiceOfferPage extends StatelessWidget {
                         AppText.textTheme.titleLarge,
                   ),
 
-
                   const SizedBox(
-                    height:
-                        AppSpacing.sm,
+                    height: AppSpacing.sm,
                   ),
-
 
                   Text(
                     'Categoria: Reparos',
@@ -107,12 +104,9 @@ class ServiceOfferPage extends StatelessWidget {
                         AppText.textTheme.bodyMedium,
                   ),
 
-
                   const SizedBox(
-                    height:
-                        AppSpacing.sm,
+                    height: AppSpacing.sm,
                   ),
-
 
                   Text(
                     '💎 3 BH',
@@ -120,12 +114,9 @@ class ServiceOfferPage extends StatelessWidget {
                         AppText.textTheme.titleMedium,
                   ),
 
-
                   const SizedBox(
-                    height:
-                        AppSpacing.sm,
+                    height: AppSpacing.sm,
                   ),
-
 
                   Text(
                     'Status: Publicado',
@@ -133,12 +124,9 @@ class ServiceOfferPage extends StatelessWidget {
                         AppText.textTheme.bodyMedium,
                   ),
 
-
                   const SizedBox(
-                    height:
-                        AppSpacing.md,
+                    height: AppSpacing.md,
                   ),
-
 
                   SizedBox(
                     width:
@@ -146,7 +134,6 @@ class ServiceOfferPage extends StatelessWidget {
 
                     child:
                         OutlinedButton(
-
                       onPressed: () {},
 
                       child:
@@ -160,36 +147,38 @@ class ServiceOfferPage extends StatelessWidget {
               ),
             ),
 
+            if (canOfferService) ...[
 
-            const SizedBox(
-              height:
-                  AppSpacing.xl,
-            ),
+              const SizedBox(
+                height:
+                    AppSpacing.xl,
+              ),
 
-
-            SizedBox(
-              width:
-                  double.infinity,
-
-              child:
-                  FilledButton(
-
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) =>
-                          const CreateServiceOfferPage(),
-                    ),
-                  );
-                },
+              SizedBox(
+                width:
+                    double.infinity,
 
                 child:
-                    const Text(
-                  'Criar novo serviço',
+                    FilledButton(
+
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) =>
+                            const CreateServiceOfferPage(),
+                      ),
+                    );
+                  },
+
+                  child:
+                      const Text(
+                    'Criar novo serviço',
+                  ),
                 ),
               ),
-            ),
+
+            ],
 
           ],
         ),
