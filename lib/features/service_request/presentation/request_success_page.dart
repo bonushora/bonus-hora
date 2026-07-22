@@ -5,7 +5,7 @@ import '../../../core/theme/app_radius.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/theme/app_text.dart';
 
-import 'service_request_page.dart';
+import 'service_accepted_page.dart';
 
 class RequestSuccessPage extends StatelessWidget {
   final String provider;
@@ -39,7 +39,9 @@ class RequestSuccessPage extends StatelessWidget {
             Center(
               child: CircleAvatar(
                 radius: 36,
-                backgroundColor: AppColors.success,
+                backgroundColor:
+                    AppColors.success,
+
                 child: const Icon(
                   Icons.check,
                   color: Colors.white,
@@ -54,7 +56,8 @@ class RequestSuccessPage extends StatelessWidget {
 
             Text(
               'Solicitação enviada com sucesso!',
-              style: AppText.textTheme.headlineMedium,
+              style:
+                  AppText.textTheme.headlineMedium,
             ),
 
             const SizedBox(
@@ -63,7 +66,8 @@ class RequestSuccessPage extends StatelessWidget {
 
             Text(
               'O prestador $provider foi notificado e poderá aceitar o serviço.',
-              style: AppText.textTheme.bodyLarge,
+              style:
+                  AppText.textTheme.bodyLarge,
             ),
 
             const SizedBox(
@@ -72,21 +76,31 @@ class RequestSuccessPage extends StatelessWidget {
 
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(
+
+              padding:
+                  const EdgeInsets.all(
                 AppSpacing.lg,
               ),
+
               decoration: BoxDecoration(
-                color: AppColors.card,
-                borderRadius: BorderRadius.circular(
+                color:
+                    AppColors.card,
+
+                borderRadius:
+                    BorderRadius.circular(
                   AppRadius.xl,
                 ),
+
                 border: Border.all(
-                  color: AppColors.border,
+                  color:
+                      AppColors.border,
                 ),
               ),
+
               child: Text(
                 '💎 $reward BH',
-                style: AppText.textTheme.titleLarge,
+                style:
+                    AppText.textTheme.titleLarge,
               ),
             ),
 
@@ -94,19 +108,23 @@ class RequestSuccessPage extends StatelessWidget {
 
             SizedBox(
               width: double.infinity,
+
               child: FilledButton(
                 onPressed: () {
-                  Navigator.pushAndRemoveUntil(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (_) =>
-                          const ServiceRequestPage(),
+                          ServiceAcceptedPage(
+                        provider: provider,
+                        reward: reward,
+                      ),
                     ),
-                    (route) => false,
                   );
                 },
+
                 child: const Text(
-                  'Ver minhas solicitações',
+                  'Ver aceite do prestador',
                 ),
               ),
             ),
